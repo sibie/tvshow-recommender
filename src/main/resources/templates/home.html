@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TV Show Recommendation Service</title>
+</head>
+<body>
+<h1>TV Show Recommendation Service</h1>
+<form method="post" th:action="@{/home/}" th:object="${tvShow}">
+    <div>
+        <label>Genre</label>
+        <select name="genre" th:field="*{genre}">
+            <option th:each="genre : ${T(com.cbamz.tvshowrecommender.domain.tvshow.Genre).values()}"
+                    th:value="${genre}" th:text="${genre.displayValue}"></option>
+        </select>
+    </div>
+    <div>
+        <label>ID</label>
+        <input id="id" required type="text" th:readonly="true" th:field="*{id}"
+               class="form-control"/>
+    </div>
+    <div>
+        <label>Title</label>
+        <input id="title" required type="text" th:readonly="true" th:field="*{title}"
+               class="form-control"/>
+    </div>
+    <div>
+        <label>Director</label>
+        <input id="director" required type="text" th:readonly="true" th:field="*{director}"
+               class="form-control"/>
+    </div>
+    <div>
+        <label>Synopsis</label>
+        <input id="synopsis" required type="text" th:readonly="true" th:field="*{synopsis}"
+               class="form-control"/>
+    </div>
+    <div>
+        <label>Release Year</label>
+        <input id="releaseYear" required type="text" th:readonly="true" th:field="*{releaseYear}"
+               class="form-control"/>
+    </div>
+    <div>
+        <label>IMDB Rating</label>
+        <input id="imdbRating" required type="text" th:readonly="true" th:field="*{imdbRating}"
+               class="form-control"/>
+    </div>
+    <input type="submit" name="recommend" value="Recommend">
+</form>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Director</th>
+        <th>Genre</th>
+        <th>Release Date</th>
+        <th>IMDB Rating</th>
+    </tr>
+    <tr th:if="${#sets.isEmpty(watchHistory)}">
+        <td colspan="5">No Records found.</td>
+    </tr>
+    <tr th:each="tvShow : ${watchHistory}">
+        <td th:text="${tvShow.title}"></td>
+        <td th:text="${tvShow.director}"></td>
+        <td th:text="${tvShow.genre}"></td>
+        <td th:text="${tvShow.releaseDate}"></td>
+        <td th:text="${tvShow.imdbRating}"></td>
+    </tr>
+</table>
+</body>
+</html>

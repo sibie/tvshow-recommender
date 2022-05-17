@@ -1,4 +1,6 @@
-package com.cbamz.tvshowrecommender.domain;
+package com.cbamz.tvshowrecommender.domain.auth;
+
+import com.cbamz.tvshowrecommender.domain.tvshow.TvShow;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -9,8 +11,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 @Getter
 @Setter
@@ -40,9 +41,15 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
-    // Additional fields to be used for security purposes.
-    private Boolean locked;
-    private Boolean enabled;
+    // Additional fields to be used for security purposes. Setting defaults to false.
+    private Boolean locked = false;
+    private Boolean enabled = false;
+
+    // List to store user's recommendation history.
+    @ElementCollection
+    @CollectionTable(name = "user_watch_history", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "watch_history")
+    private Set<TvShow> watchHistory;
 
     public User(String firstName,
                 String lastName,
@@ -54,6 +61,7 @@ public class User implements UserDetails {
         this.email = email;
         this.password = password;
         this.userRole = userRole;
+        this.watchHistory = new HashSet<>();
     }
 
     @Override
@@ -70,14 +78,6 @@ public class User implements UserDetails {
     @Override
     public String getUsername() {
         return email;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
     }
 
     @Override
@@ -100,5 +100,13 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return enabled;
+    }
+
+    public Set<TvShow> getWatchHistory() {
+        return watchHistory;
+    }
+
+    public void setWatchHistory(Set<TvShow> watchHistory) {
+        this.watchHistory = watchHistory;
     }
 }
