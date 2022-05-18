@@ -25,4 +25,5 @@ public class TvShow {
 
     private String releaseYear;
     private Float imdbRating;
+    private String imdbLink;
 }

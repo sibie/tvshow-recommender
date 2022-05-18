@@ -29,7 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                     .antMatchers("/api/v1/registration/**")
                     .permitAll()
-                    .antMatchers("/h2-console/**")
+                    .antMatchers("/h2-console/**", "/js/**", "/css/**")
                     .permitAll()
                     .antMatchers("/register/**")
                     .permitAll()
@@ -37,7 +37,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated().and()
                 .formLogin(form -> form
                         .loginPage("/login").permitAll()
-                        .defaultSuccessUrl("/home")
+                        .defaultSuccessUrl("/")
                         .failureUrl("/login?error=true")
                 );
 

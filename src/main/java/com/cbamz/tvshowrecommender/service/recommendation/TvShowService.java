@@ -27,8 +27,7 @@ public class TvShowService {
         return tvShowRepository.findAll(spec); // JPA method to return result based on spec object.
     }
 
-    public List<TvShow> test() {
-        return tvShowRepository.findAll();
+    public TvShow loadTvShowByTitle(String title) {
+        return tvShowRepository.findByTitle(title).get();
     }
-
 }

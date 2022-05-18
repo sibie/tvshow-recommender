@@ -10,40 +10,33 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Controller
-@RequestMapping("/home")
 @AllArgsConstructor
 public class HomeViewController {
     private final RecommendationService recommendationService;
 
-    // Logout TBC
-
-    @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST}, params="recommend")
-    public String recommend(Model model, @RequestParam("genre") String genre) {
-        TvShow tvShow = recommendationService.recommend(genre);
-        model.addAttribute("tvShow", new TvShow());
-        return "redirect:/home/";
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String getWatchHistory(Model model) {
-        Set<TvShow> watchHistory = recommendationService.getWatchHistory();
-        model.addAttribute("watchHistory", watchHistory);
-        model.addAttribute("tvShow", new TvShow());
+    @RequestMapping(path = {"/","/search"})
+    public String home(Model model, String genre) {
+        if(genre != null) {
+            TvShow tvShow = recommendationService.recommend(genre);
+            if(!tvShow.getTitle().contains("NO OPTIONS"))
+                recommendationService.setCache(tvShow.getTitle());
+            List<TvShow> list = new ArrayList<TvShow>();
+            list.add(tvShow);
+            model.addAttribute("list", list);
+        }
         return "home";
     }
 
-    @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST}, params="add")
-    public String addToWatchHistory(Model model, @ModelAttribute TvShow tvShow) {
-        recommendationService.addToWatchHistory(tvShow);
-        return "redirect:/home/";
-    }
-
-    @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST}, params="reset")
-    public String resetWatchHistory(Model model) {
-        recommendationService.resetWatchHistory();
-        return "redirect:/home/";
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public String addToWatchHistory(Model model) {
+        recommendationService.addToWatchHistory(recommendationService.getCache());
+        return "redirect:/history/";
     }
 }
+
+    // Logout TBC

@@ -81,4 +81,15 @@ public class UserService implements UserDetailsService {
         Set<TvShow> userHistory = user.getWatchHistory();
         return userHistory;
     }
+
+    public String getCachedShow(String email) {
+        User user = userRepository.findByEmail(email).get();
+        return user.getCachedShow();
+    }
+
+    public User setCachedShow(String email, String title) {
+        User user = userRepository.findByEmail(email).get();
+        user.setCachedShow(title);
+        return userRepository.save(user);
+    }
 }

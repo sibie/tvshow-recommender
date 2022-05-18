@@ -1,18 +1,13 @@
 package com.cbamz.tvshowrecommender.service.recommendation;
 
-import com.cbamz.tvshowrecommender.domain.auth.User;
 import com.cbamz.tvshowrecommender.domain.tvshow.TvShow;
 import com.cbamz.tvshowrecommender.service.auth.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import java.security.Principal;
 import java.util.*;
-
-import static java.lang.System.out;
 
 @Service
 @AllArgsConstructor
@@ -56,5 +51,15 @@ public class RecommendationService {
     public Set<TvShow> getWatchHistory() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return userService.getWatchHistory(authentication.getName());
+    }
+
+    public TvShow getCache() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return tvShowService.loadTvShowByTitle(userService.getCachedShow(authentication.getName()));
+    }
+
+    public void setCache(String title) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        userService.setCachedShow(authentication.getName(), title);
     }
 }

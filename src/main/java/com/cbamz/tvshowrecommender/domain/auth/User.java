@@ -51,6 +51,8 @@ public class User implements UserDetails {
     @Column(name = "watch_history")
     private Set<TvShow> watchHistory;
 
+    private String cachedShow;
+
     public User(String firstName,
                 String lastName,
                 String email,
@@ -62,6 +64,7 @@ public class User implements UserDetails {
         this.password = password;
         this.userRole = userRole;
         this.watchHistory = new HashSet<>();
+        this.cachedShow = "";
     }
 
     @Override
@@ -108,5 +111,13 @@ public class User implements UserDetails {
 
     public void setWatchHistory(Set<TvShow> watchHistory) {
         this.watchHistory = watchHistory;
+    }
+
+    public String getCachedShow() {
+        return cachedShow;
+    }
+
+    public void setCachedShow(String title) {
+        this.cachedShow = title;
     }
 }
