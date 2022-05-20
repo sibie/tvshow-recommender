@@ -87,7 +87,7 @@ To be added.
        starttls.enable: true
        ssl.trust:
    ```
-4. If you don't wish to use encryption, delete the Jasypt block from application.yml file and remove @EnableEncryptableProperties annotation from main class. Otherwise use the Jasypt online tool and secret key of your choice to generate encrypted values for anything you want to protect. Then update into the file.
+4. If you don't wish to use encryption, delete the Jasypt block from application.yml file and remove `@EnableEncryptableProperties` annotation from main class. Otherwise use the Jasypt online tool and secret key of your choice to generate encrypted values for anything you want to protect. Then update into the file.
 
 5.  Run the main application class and you should see it up and running on localhost:8080.
 
