@@ -34,13 +34,13 @@ Do note that I'll be taking down the project from Heroku after May 30th, 2022 as
 
 [![Login](images/login.PNG)
 
-[![Register][Register]](images/register.PNG)
+[![Register](images/register.PNG)
 
-[![Email][Email]](images/email.PNG)
+[![Email](images/email.PNG)
 
-[![Recommend][Recommendation]](images/recommend.PNG)
+[![Recommend](images/recommend.PNG)
 
-[![History][Watch History]](images/history.PNG)
+[![History](images/history.PNG)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -143,7 +143,7 @@ Then I prepared my application build for deployment on to Heroku.
 
 Followed a standard MVC approach to organizing the project. Grouped the classes on the basis of their use, i.e. Auth, Registration or Recommendation.
 
-[![Project Structure][Project Structure]](images/project-structure.PNG)
+[![Project Structure](images/project-structure.PNG)
 
 
 
