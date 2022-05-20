@@ -58,8 +58,6 @@ To be added.
 
 ## Getting Started
 
-This project was developed with Java 17, I just made the POM version as 8 so I could deploy my app with my free Heroku account. Overall
-
 ### Prerequisites
 
 1. Java 1.8 or above installed on your local system - Spring depedencies will most likely not work with anything pre-8.
@@ -92,6 +90,8 @@ This project was developed with Java 17, I just made the POM version as 8 so I c
 4. If you don't wish to use encryption, delete the Jasypt block from application.yml file and remove @EnableEncryptableProperties annotation from main class. Otherwise use the Jasypt online tool and secret key of your choice to generate encrypted values for anything you want to protect. Then update into the file.
 
 5.  Run the main application class and you should see it up and running on localhost:8080.
+
+***Note** - This project was developed with Java 17, I just made the POM version as 8 so I could deploy my app with my free Heroku account.*
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
