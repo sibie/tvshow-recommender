@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/action.gif" alt="Logo" width="400" height="300">
+    <img src="images/action.gif" alt="Logo" width="300" height="200">
   </a>
 
   <h3 align="center">TV Show Recommender</h3>
