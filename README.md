@@ -40,7 +40,7 @@ To be added.
 
 ### Built With
 
-* [Java](https://www.java.com/en/)
+* [Java](https://www.java.com/en/) - Programming language of my choice.
 * [Maven](https://maven.apache.org/) - Build tool for the project.
 * [SpringBoot](https://spring.io/projects/spring-boot) - Has everything you need to build out amazing cloud-native web applications.
   * Spring Security - Authentication layer of the application including login, logout, session management, etc.
