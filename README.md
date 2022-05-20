@@ -32,15 +32,15 @@ Sharing this codebase in case it may prove helpful to anyone out there trying to
 
 Do note that I'll be taking down the project from Heroku after May 30th, 2022 as user registration won't work anymore with Gmail SMTP due to changes in their policy for 3rd party use. Might take some time to get the time to switch to a new SMTP provider so here are some screenshots of the app for reference:
 
-[![Login][Login](images/project-structure.png)
+[![Login](images/login.PNG)
 
-[![Register][Register]](images/project-structure.PNG)
+[![Register][Register]](images/register.PNG)
 
-[![Email][Email]](images/project-structure.PNG)
+[![Email][Email]](images/email.PNG)
 
-[![Recommend][Recommendation]](images/project-structure.PNG)
+[![Recommend][Recommendation]](images/recommend.PNG)
 
-[![History][Watch History]](images/project-structure.PNG)
+[![History][Watch History]](images/history.PNG)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
