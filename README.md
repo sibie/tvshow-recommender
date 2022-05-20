@@ -40,17 +40,17 @@ To be added.
 
 ### Built With
 
-* [Java](https://www.java.com/en/) - Programming language of my choice.
-* [Maven](https://maven.apache.org/) - Build tool for the project.
-* [SpringBoot](https://spring.io/projects/spring-boot) - Has everything you need to build out amazing cloud-native web applications.
-  * Spring Security - Authentication layer of the application including login, logout, session management, etc.
-  * Spring MVC - To connect backend business logic / CRUD operations with the frontend.
-  * Spring Data JPA - Auto creation of DB tables and easy mapping to entites and CRUD repositories.
-  * Thymeleaf - Data binding with front end.
-  * H2 - Embedded DB, since this is a demo project using H2 just makes things easier.
-* [Bootstrap](https://getbootstrap.com/) - For web page styling and customization.
-* Java Mail Sender with Gmail SMTP - To send verification links to users so they can enable their accounts.
-* Jasypt and Bcrypt - Encryption of sensitive application and user data.
+* [**Java**](https://www.java.com/en/) - Programming language of my choice.
+* [**Maven**](https://maven.apache.org/) - Build tool for the project.
+* [**SpringBoot**](https://spring.io/projects/spring-boot) - Has everything you need to build out amazing cloud-native web applications.
+  * *Spring Security* - Authentication layer of the application including login, logout, session management, etc.
+  * *Spring MVC* - To connect backend business logic / CRUD operations with the frontend.
+  * *Spring Data JPA* - Auto creation of DB tables and easy mapping to entites and CRUD repositories.
+  * *Thymeleaf* - Data binding with front end.
+  * *H2* - Embedded DB, since this is a demo project using H2 just makes things easier.
+* [**Bootstrap**](https://getbootstrap.com/) - For web page styling and customization.
+* **Java Mail Sender with Gmail SMTP** - To send verification links to users so they can enable their accounts.
+* **Jasypt and Bcrypt** - Encryption of sensitive application and user data.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -101,9 +101,9 @@ This project was developed with Java 17, I just made the POM version as 8 so I c
 
 I worked on this project over the course of a week in 3 separate sessions:
 
-* Session 1 - SpringBoot Project and H2 setup, Spring Security integration, Registration service with Email verification using Java Mail Sender + Gmail SMTP.
-* Session 2 - Core Recommendation Service for users to find new TV shows to watch and manage their viewing history.
-* Session 3 - Development and styling of custom pages for both services, login and error handling using Thymeleaf/Bootstrap.
+* **Session 1** - SpringBoot Project and H2 setup, Spring Security integration, Registration service with Email verification using Java Mail Sender + Gmail SMTP.
+* **Session 2** - Core Recommendation Service for users to find new TV shows to watch and manage their viewing history.
+* **Session 3** - Development and styling of custom pages for both services, login and error handling using Thymeleaf/Bootstrap.
 
 Then I prepared my application build for deployment on to Heroku.
 
@@ -149,13 +149,13 @@ TBC
 
 Do note that this is a practice project with the aim of improving my coding skills, so the goal was to demonstrate how features can be implemented rather than making a full-scale production-ready application. If this were to be a real-world app, there's a lot of ways in which this could be improved.
 
-* Email Validation - Creating a custom method to validate user email before allowing the registration process to continue. Currently this is not handled.
-* Resend Token - Sometimes token data can be corrupt or users can miss emails. A utility to resend email with new token would be a handy feature.
-* Robust TV Show Dataset - Currently I use a premade data.sql file to inject some sample show data into my H2DB at run time. Instead we could set up a new bean that hits a 3rd party API and transforms incoming JSON into SQL records to get us a massive selection of TV Shows for users to browse through.
-* Improved Search Criteria - I just created one custom spec to filter based on genre to demonstrate my understanding of this interface. We can create more complex predicates which could filter using more criteria, giving users more control over the sort of recommendations they get.
-* Frontend styling - In the interest of time, I used Thymeleaf to build out my UI. React based solutions are much more powerful and allow for a much cleaner and interactive user experience. We could add an Image table as well to our backend, so we can display show poster on the page. We could also have our own custom TV Show pages (based on ID) rather than redirecting users to IMDB.
-* Comprehensive Error Handling - Right now, I just have a general error page to handle all codes. Adding custom pages for specific codes would help users to understand whats going wrong when bugs happen. Logging could be improved too to analyze metrics on app performance.
-* Better Testing - The number of tests I wrote were quite less and that's not optimal. Production-grade apps need maximum coverage so we can catch bugs before they happen when possible.
+* **Email Validation** - Creating a custom method to validate user email before allowing the registration process to continue. Currently this is not handled.
+* **Resend Token** - Sometimes token data can be corrupt or users can miss emails. A utility to resend email with new token would be a handy feature.
+* **Robust TV Show Dataset** - Currently I use a premade data.sql file to inject some sample show data into my H2DB at run time. Instead we could set up a new bean that hits a 3rd party API and transforms incoming JSON into SQL records to get us a massive selection of TV Shows for users to browse through.
+* **Improved Search Criteria** - I just created one custom spec to filter based on genre to demonstrate my understanding of this interface. We can create more complex predicates which could filter using more criteria, giving users more control over the sort of recommendations they get.
+* **Frontend styling** - In the interest of time, I used Thymeleaf to build out my UI. React based solutions are much more powerful and allow for a much cleaner and interactive user experience. We could add an Image table as well to our backend, so we can display show poster on the page. We could also have our own custom TV Show pages (based on ID) rather than redirecting users to IMDB.
+* **Comprehensive Error** Handling - Right now, I just have a general error page to handle all codes. Adding custom pages for specific codes would help users to understand whats going wrong when bugs happen. Logging could be improved too to analyze metrics on app performance.
+* **Better Testing** - The number of tests I wrote were quite less and that's not optimal. Production-grade apps need maximum coverage so we can catch bugs before they happen when possible.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -164,9 +164,9 @@ Do note that this is a practice project with the aim of improving my coding skil
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Amigoscode](https://www.youtube.com/c/amigoscode) - Please subscribe to this channel if you haven't already, best in the game.
-* [MD Bootstrap](https://mdbootstrap.com/) - For inspiration while styling my web pages.
-* [Spring Community](https://spring.io/community)
+* [**Amigoscode**](https://www.youtube.com/c/amigoscode) - Please subscribe to this channel if you haven't already, best in the game.
+* [**MD Bootstrap**](https://mdbootstrap.com/) - For inspiration while styling my web pages.
+* [**Spring Community**](https://spring.io/community)
 
 Also it goes without saying, but a huge thanks to the amazing community on Stack Overflow for the hundreds of doubts I've clarified there. :grin:
 
