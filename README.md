@@ -28,7 +28,9 @@ This is a demo Spring Boot project for users to get random TV show recommendatio
   * Token verification via email to confirm account creation
   * The service itself which is implemented with Spring modules like MVC, Security and JPA
 
-Sharing this codebase in case it may prove helpful to anyone out there trying to practice their Java and Spring skills. Feel free to fork your own branch.
+Sharing this codebase in case it may prove helpful to anyone out there trying to practice their Java and Spring skills.
+
+Feel free to fork your own branch. :grin: 
 
 Do note that I'll be taking down the project from Heroku after May 30th, 2022 as user registration won't work anymore with Gmail SMTP due to changes in their policy for 3rd party use. Might take some time to get the time to switch to a new SMTP provider so here are some screenshots of the app for reference:
 
@@ -41,6 +43,8 @@ Do note that I'll be taking down the project from Heroku after May 30th, 2022 as
 ![Recommend](images/recommend.PNG)
 
 ![History](images/history.PNG)
+
+:hand: Also since I'm using H2DB, your data may not persist between long periods. This is because Heroku periodically takes down apps for free accounts, so naturally the DB will reset during downtime. You may want to switch to a better DB to handle this, you just need to configure driver details and add the dependencies, JPA will take care of the rest :grin:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
