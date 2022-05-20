@@ -20,9 +20,7 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
+## Table of Contents
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -39,12 +37,11 @@
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#features">Features</a></li>
-    <li><a href="#project_structure">Project Structure</a></li>
-    <li><a href="#project design">Project Design</a></li>
-    <li><a href="#future improvements">Future Improvements</a></li>
+    <li><a href="#project-structure">Project Structure</a></li>
+    <li><a href="#project-design">Project Design</a></li>
+    <li><a href="#future-improvements">Future Improvements</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-</details>
 
 ## About The Project
 
