@@ -28,7 +28,7 @@ This is a demo Spring Boot project for users to get random TV show recommendatio
   * Token verification via email to confirm account creation
   * The service itself which is implemented with Spring modules like MVC, Security and JPA
 
-Sharing this codebase in case it may prove helpful to anyone out there trying to practice their Java and Spring skills.
+Sharing this codebase in case it may prove helpful to anyone out there trying to practice their Java and Spring skills. Feel free to fork your own branch.
 
 Do note that I'll be taking down the project from Heroku after May 30th, 2022 as user registration won't work anymore with Gmail SMTP due to changes in their policy for 3rd party use. Might take some time to get the time to switch to a new SMTP provider so here are some screenshots of the app for reference:
 
@@ -101,7 +101,7 @@ To be added.
 
 I worked on this project over the course of a week in 3 separate sessions:
 
-* **Session 1** - SpringBoot Project and H2 setup, Spring Security integration, Registration service with Email verification using Java Mail Sender + Gmail SMTP.
+* **Session 1** - SpringBoot/H2 project setup, Spring Security integration, Registration service with Email verification using Java Mail Sender + Gmail SMTP.
 * **Session 2** - Core Recommendation Service for users to find new TV shows to watch and manage their viewing history.
 * **Session 3** - Development and styling of custom pages for both services, login and error handling using Thymeleaf/Bootstrap.
 
