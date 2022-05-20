@@ -22,7 +22,7 @@
 
 ## About The Project
 
-This is a demo Spring Boot project for users to get random TV show recommendations that they have never seen before. Some features include:
+This is a demo Spring Boot project for users to get random TV show recommendations that they have never seen before. Features include:
 
   * User registration and session management
   * Token verification via email to confirm account creation
