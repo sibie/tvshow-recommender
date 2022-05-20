@@ -85,7 +85,7 @@ Do note that I'll be taking down the project from Heroku after May 30th, 2022 as
    ```sh
    mvn install
    ```
-3. Configure the application.yml file with SMTP details you wish to use. Without this, users won't be able to verify their accounts and use the service. 
+3. Configure the application.yml file with SMTP details you wish to use. Without this, users won't be able to verify their accounts and use the service. Of course you can use Spring admin credentials to login for a local instance, but you won't be able to use other services (you need to be registered for your account to be mapped to other tables).
    ```yml
    mail:
      host:
