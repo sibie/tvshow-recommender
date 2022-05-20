@@ -32,15 +32,15 @@ Sharing this codebase in case it may prove helpful to anyone out there trying to
 
 Do note that I'll be taking down the project from Heroku after May 30th, 2022 as user registration won't work anymore with Gmail SMTP due to changes in their policy for 3rd party use. Might take some time to get the time to switch to a new SMTP provider so here are some screenshots of the app for reference:
 
-[![Login](images/login.PNG)
+![Login](images/login.PNG)
 
-[![Register](images/register.PNG)
+![Register](images/register.PNG)
 
-[![Email](images/email.PNG)
+![Email](images/email.PNG)
 
-[![Recommend](images/recommend.PNG)
+![Recommend](images/recommend.PNG)
 
-[![History](images/history.PNG)
+![History](images/history.PNG)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -143,7 +143,7 @@ Then I prepared my application build for deployment on to Heroku.
 
 Followed a standard MVC approach to organizing the project. Grouped the classes on the basis of their use, i.e. Auth, Registration or Recommendation.
 
-[![Project Structure](images/project-structure.PNG)
+![Project Structure](images/project-structure.PNG)
 
 
 
